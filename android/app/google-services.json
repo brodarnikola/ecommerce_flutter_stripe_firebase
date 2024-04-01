@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "515840314674",
+    "project_id": "flutter-stripe-ecommerce-c7edf",
+    "storage_bucket": "flutter-stripe-ecommerce-c7edf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:515840314674:android:0be6c0eb57fff65ba3db2b",
+        "android_client_info": {
+          "package_name": "com.example.ecommerce_with_flutter_firebase_and_stripe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkOaOPO5Z6UlOhxrRXLO0c0op54tYbxiI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
