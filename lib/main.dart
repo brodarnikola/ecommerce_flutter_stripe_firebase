@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:payment_client/payment_client.dart';
 
+import '.env';
 import 'firebase_options.dart';
 import 'models/cart.dart';
 import 'repositories/cart_repository.dart';
@@ -31,12 +32,12 @@ Future<void> main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-categoryRepository.createCategories();
-  productRepository.createProducts();
+// categoryRepository.createCategories();
+//   productRepository.createProducts();
 
   // TODO: Add your Stripe publishable key here
-  Stripe.publishableKey =
-      'pk_test_51OtTaMI3GNXOzNmD1mxA8DFfOOww5cblQQxbnVtnbkQnJjr6oEZsysYZs4c9Hve2qyFvzPvXiJQZtu0CwELI61VR00jOfvYiX9';
+  Stripe.publishableKey = PUBLIC_KEY;
+      // 'pk_test_51OtTaMI3GNXOzNmD1mxA8DFfOOww5cblQQxbnVtnbkQnJjr6oEZsysYZs4c9Hve2qyFvzPvXiJQZtu0CwELI61VR00jOfvYiX9';
   await Stripe.instance.applySettings();
   runApp(const MyApp());
 }

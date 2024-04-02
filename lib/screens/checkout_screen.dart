@@ -103,6 +103,27 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
     );
 
     print(response);
+                                
+    if (response['status'] == 'succeeded') {
+
+      cart.cartItems.clear();
+      // cart = cart.copyWith(
+      //   cartItems: List.from(cart.cartItems)
+      //     ..remove(existingCartItem)
+      //     ..add(
+      //       existingCartItem.copyWith(quantity: initialQuantity + quantity),
+      //     ),
+      // );
+ 
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Successfull payment!'),
+        ),
+      );
+      Navigator.pushNamed(context, '/categories');
+    }
+
+    print('response is: $response');
     if (response['requiresAction'] == true &&
         response['clientSecret'] != null) {
       // final paymentIntent =
